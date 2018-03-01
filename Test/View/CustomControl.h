@@ -11,6 +11,7 @@
 
 @interface CustomControl : UIView
 
+
 @property (weak, nonatomic) IBOutlet UILabel *warn;
 @property (weak, nonatomic) IBOutlet UIButton *btn;
 @property (nonatomic,strong) UIImageView *arrowImageView;

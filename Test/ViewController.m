@@ -34,7 +34,6 @@
     CGPoint pointerCenter = CGPointMake(sender.center.x, 0);
     [CC getFrameFromSuperViewWithCenter:pointerCenter];
     
-    NSLog(@"label height%lf",CC.warn.bounds.size.height);
     //Setting CC's frame
     CC.frame = CGRectMake(0, sender.frame.origin.y + sender.frame.size.height, SCREEN_WIDTH, 150);
    

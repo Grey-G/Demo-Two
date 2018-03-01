@@ -27,7 +27,7 @@
 
 -(void)getValueFromSuperViewWithLable:(NSString *)content
 {
-    _warn.text = content;
+    self.warn.text = content;
 }
 
 -(void)getFrameFromSuperViewWithCenter:(CGPoint)center
