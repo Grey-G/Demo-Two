@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j0S-MV-VGR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ipv-Vl-JYH">
+            <objects>
+                <navigationController id="j0S-MV-VGR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g5b-gy-3bc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="X3g-Cv-fdf" kind="relationship" relationship="rootViewController" id="u20-Eh-6aA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JIH-cB-Gio" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-617" y="32"/>
+        </scene>
+        <!--Players-->
+        <scene sceneID="UwU-u3-FAK">
+            <objects>
+                <viewController id="X3g-Cv-fdf" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TxU-jr-cZA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpp-NP-9Be" customClass="EdgeInsetsLabel">
+                                <rect key="frame" x="5" y="79" width="306" height="44"/>
+                                <color key="backgroundColor" red="0.99737173318862915" green="0.94506436586380005" blue="0.46537399291992188" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="c3T-oH-CMl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUy-1F-iYL">
+                                <rect key="frame" x="326" y="79" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="OHm-WC-lvJ"/>
+                                    <constraint firstAttribute="height" constant="44" id="OMJ-bz-lcX"/>
+                                </constraints>
+                                <state key="normal" image="cancel.jpeg"/>
+                                <connections>
+                                    <action selector="warning:" destination="X3g-Cv-fdf" eventType="touchUpInside" id="ZX5-an-N9H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tpp-NP-9Be" firstAttribute="top" secondItem="Oc6-PC-0ZY" secondAttribute="top" constant="15" id="9gd-wC-eBo"/>
+                            <constraint firstItem="Oc6-PC-0ZY" firstAttribute="trailing" secondItem="jUy-1F-iYL" secondAttribute="trailing" constant="5" id="D75-xQ-8vt"/>
+                            <constraint firstItem="jUy-1F-iYL" firstAttribute="leading" secondItem="Tpp-NP-9Be" secondAttribute="trailing" constant="15" id="Pbx-qk-D0q"/>
+                            <constraint firstItem="Tpp-NP-9Be" firstAttribute="leading" secondItem="Oc6-PC-0ZY" secondAttribute="leading" constant="5" id="Yi7-VU-4g4"/>
+                            <constraint firstItem="jUy-1F-iYL" firstAttribute="top" secondItem="Oc6-PC-0ZY" secondAttribute="top" constant="15" id="v0I-2U-0oA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Oc6-PC-0ZY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Players" leftItemsSupplementBackButton="YES" id="9xH-93-ZBt"/>
+                    <connections>
+                        <outlet property="label" destination="Tpp-NP-9Be" id="kTk-yP-OX4"/>
+                        <outlet property="select" destination="jUy-1F-iYL" id="CUY-wI-TiV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ep-0j-X5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="32"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cancel.jpeg" width="43" height="44"/>
+    </resources>
+</document>
